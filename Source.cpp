@@ -125,6 +125,10 @@ int LongestByteStrand(int num_files, map<int, vector<int>> *m, unordered_map<int
 					{
 						for (auto k = r->second.begin(); k != r->second.end(); ++k)
 						{
+							if (longest_strand_len > bytes[b].size() || longest_strand_len > bytes[a].size())
+							{
+								continue;
+							}
 
 							int index = (*j);
 							int index2 = (*k);
